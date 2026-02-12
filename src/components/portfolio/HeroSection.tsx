@@ -1,28 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 
-// Floating creature component
-const FloatingCreature = ({ delay, x, y, size, emoji }: { delay: number; x: string; y: string; size: string; emoji: string }) => (
-  <motion.div
-    className={`absolute ${size} pointer-events-none`}
-    style={{ left: x, top: y }}
-    animate={{
-      x: [0, 40, -30, 20, 0],
-      y: [0, -25, 15, -20, 0],
-      opacity: [0.4, 0.8, 0.6, 0.9, 0.4],
-      scale: [1, 1.1, 0.95, 1.05, 1],
-    }}
-    transition={{
-      duration: 8 + delay,
-      repeat: Infinity,
-      delay,
-      ease: "easeInOut",
-    }}
-  >
-    <span className="text-2xl md:text-3xl drop-shadow-[0_0_15px_rgba(0,255,200,0.6)]">{emoji}</span>
-  </motion.div>
-);
-
 // Bioluminescent bubble
 const GlowBubble = ({ delay, x, size, color }: { delay: number; x: string; size: number; color: string }) => (
   <motion.div
@@ -70,7 +48,7 @@ const WaterRipple = ({ delay, x, y }: { delay: number; x: string; y: string }) =
   </motion.div>
 );
 
-const HeroSection = () => {
+const HeroSection = ({ onSimulate }: { onSimulate: () => void }) => {
   return (
     <section
       id="hero"
@@ -103,18 +81,6 @@ const HeroSection = () => {
             }}
           />
         ))}
-      </div>
-
-      {/* Floating Pandora creatures */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <FloatingCreature delay={0} x="10%" y="20%" size="w-8 h-8" emoji="🦋" />
-        <FloatingCreature delay={2} x="80%" y="30%" size="w-8 h-8" emoji="🦋" />
-        <FloatingCreature delay={1} x="60%" y="60%" size="w-6 h-6" emoji="🪲" />
-        <FloatingCreature delay={3} x="25%" y="70%" size="w-8 h-8" emoji="🦎" />
-        <FloatingCreature delay={1.5} x="90%" y="15%" size="w-6 h-6" emoji="🐉" />
-        <FloatingCreature delay={4} x="45%" y="80%" size="w-8 h-8" emoji="🦅" />
-        <FloatingCreature delay={2.5} x="15%" y="45%" size="w-6 h-6" emoji="✨" />
-        <FloatingCreature delay={3.5} x="70%" y="50%" size="w-6 h-6" emoji="🌿" />
       </div>
 
       {/* Glowing bubbles rising */}
@@ -177,9 +143,12 @@ const HeroSection = () => {
           <a href="#summary" className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(0,255,200,0.5)] transition-all">
             Begin Journey ↓
           </a>
-          <a href="#contact" className="px-8 py-3 border border-cyan-500/40 text-cyan-300 rounded-full hover:bg-cyan-500/10 transition-all">
-            Contact Me
-          </a>
+          <button 
+            onClick={onSimulate}
+            className="px-8 py-3 border border-cyan-500/40 text-cyan-300 rounded-full hover:bg-cyan-500/10 transition-all"
+          >
+            ▶ Simulate Journey
+          </button>
         </motion.div>
       </div>
 
