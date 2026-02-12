@@ -30,10 +30,10 @@ const SummarySection = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: "CGPA", value: "9.04" },
-              { label: "Projects", value: "6+" },
-              { label: "Certifications", value: "8+" },
-              { label: "Hackathons", value: "4+" },
+              { label: "CGPA", value: "9.07" },
+              { label: "Projects", value: "35+" },
+              { label: "Certifications", value: "15+" },
+              { label: "Hackathons", value: "5+" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
