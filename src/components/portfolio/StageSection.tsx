@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import AvatarAnimatedBg from "./AvatarAnimatedBg";
 
 interface StageSectionProps {
   id: string;
@@ -7,9 +8,10 @@ interface StageSectionProps {
   stageNumber: number;
   stageTitle: string;
   children: ReactNode;
+  animatedBgTheme?: "water" | "fire" | "cosmic";
 }
 
-const StageSection = ({ id, bgImage, stageNumber, stageTitle, children }: StageSectionProps) => {
+const StageSection = ({ id, bgImage, stageNumber, stageTitle, children, animatedBgTheme }: StageSectionProps) => {
   return (
     <section
       id={id}
@@ -21,6 +23,9 @@ const StageSection = ({ id, bgImage, stageNumber, stageTitle, children }: StageS
         style={{ backgroundImage: `url(${bgImage})` }}
       />
       <div className="absolute inset-0 bg-black/50" />
+
+      {/* Animated theme background */}
+      {animatedBgTheme && <AvatarAnimatedBg theme={animatedBgTheme} />}
 
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

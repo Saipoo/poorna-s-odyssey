@@ -78,7 +78,7 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <StageSection id="projects" bgImage={spaceBg} stageNumber={4} stageTitle="The Floating Creations">
+    <StageSection id="projects" bgImage={spaceBg} stageNumber={4} stageTitle="The Floating Creations" animatedBgTheme="fire">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

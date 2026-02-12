@@ -4,7 +4,7 @@ import forestBg from "@/assets/forest-bg.jpg";
 
 const SummarySection = () => {
   return (
-    <StageSection id="summary" bgImage={forestBg} stageNumber={1} stageTitle="The Awakening">
+    <StageSection id="summary" bgImage={forestBg} stageNumber={1} stageTitle="The Awakening" animatedBgTheme="water">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

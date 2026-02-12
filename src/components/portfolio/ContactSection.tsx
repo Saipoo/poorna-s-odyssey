@@ -4,7 +4,7 @@ import mountainBg from "@/assets/mountain-bg.jpg";
 
 const ContactSection = () => {
   return (
-    <StageSection id="contact" bgImage={mountainBg} stageNumber={7} stageTitle="The Connection">
+    <StageSection id="contact" bgImage={mountainBg} stageNumber={7} stageTitle="The Connection" animatedBgTheme="cosmic">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
