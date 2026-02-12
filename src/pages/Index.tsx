@@ -33,18 +33,6 @@ const Index = () => {
       <AchievementsSection />
       <ContactSection />
 
-      {/* Simulate button at bottom */}
-      {!simulating && (
-        <div className="fixed bottom-6 right-6 z-50">
-          <button
-            onClick={handleSimulate}
-            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-emerald-500 text-black text-sm font-bold rounded-full hover:shadow-[0_0_30px_rgba(0,255,200,0.5)] transition-all animate-pulse hover:animate-none"
-          >
-            ▶ Simulate Journey
-          </button>
-        </div>
-      )}
-
       <SimulateMode active={simulating} onStop={handleStopSimulate} />
     </div>
   );

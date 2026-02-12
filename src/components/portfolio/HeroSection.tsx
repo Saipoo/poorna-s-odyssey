@@ -165,9 +165,12 @@ const HeroSection = () => {
           <a href="#summary" className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(0,255,200,0.5)] transition-all">
             Begin Journey ↓
           </a>
-          <a href="#contact" className="px-8 py-3 border border-cyan-500/40 text-cyan-300 rounded-full hover:bg-cyan-500/10 transition-all">
-            Contact Me
-          </a>
+          <button 
+            onClick={onSimulate}
+            className="px-8 py-3 border border-cyan-500/40 text-cyan-300 rounded-full hover:bg-cyan-500/10 transition-all"
+          >
+            ▶ Simulate Journey
+          </button>
         </motion.div>
       </div>
 
