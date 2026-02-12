@@ -1,28 +1,6 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 
-// Floating creature component
-const FloatingCreature = ({ delay, x, y, size, emoji }: { delay: number; x: string; y: string; size: string; emoji: string }) => (
-  <motion.div
-    className={`absolute ${size} pointer-events-none`}
-    style={{ left: x, top: y }}
-    animate={{
-      x: [0, 40, -30, 20, 0],
-      y: [0, -25, 15, -20, 0],
-      opacity: [0.4, 0.8, 0.6, 0.9, 0.4],
-      scale: [1, 1.1, 0.95, 1.05, 1],
-    }}
-    transition={{
-      duration: 8 + delay,
-      repeat: Infinity,
-      delay,
-      ease: "easeInOut",
-    }}
-  >
-    <span className="text-2xl md:text-3xl drop-shadow-[0_0_15px_rgba(0,255,200,0.6)]">{emoji}</span>
-  </motion.div>
-);
-
 // Bioluminescent bubble
 const GlowBubble = ({ delay, x, size, color }: { delay: number; x: string; size: number; color: string }) => (
   <motion.div
@@ -70,7 +48,7 @@ const WaterRipple = ({ delay, x, y }: { delay: number; x: string; y: string }) =
   </motion.div>
 );
 
-const HeroSection = () => {
+const HeroSection = ({ onSimulate }: { onSimulate: () => void }) => {
   return (
     <section
       id="hero"
