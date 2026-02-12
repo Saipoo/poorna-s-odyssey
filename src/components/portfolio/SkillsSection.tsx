@@ -55,7 +55,7 @@ const orbitSkills = [
 
 const SkillsSection = () => {
   return (
-    <StageSection id="skills" bgImage={skillsBg} stageNumber={3} stageTitle="The Tree of Skills">
+    <StageSection id="skills" bgImage={skillsBg} stageNumber={3} stageTitle="The Tree of Skills" animatedBgTheme="water">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
