@@ -28,7 +28,7 @@ const education = [
 
 const EducationSection = () => {
   return (
-    <StageSection id="education" bgImage={oceanBg} stageNumber={2} stageTitle="The Depths of Knowledge">
+    <StageSection id="education" bgImage={oceanBg} stageNumber={2} stageTitle="The Depths of Knowledge" animatedBgTheme="water">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

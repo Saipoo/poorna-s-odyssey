@@ -35,7 +35,7 @@ const achievements = [
 
 const AchievementsSection = () => {
   return (
-    <StageSection id="achievements" bgImage={achievementsBg} stageNumber={6} stageTitle="The Summit of Triumphs">
+    <StageSection id="achievements" bgImage={achievementsBg} stageNumber={6} stageTitle="The Summit of Triumphs" animatedBgTheme="cosmic">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

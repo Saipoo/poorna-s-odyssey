@@ -15,7 +15,7 @@ const certifications = [
 
 const CertificationsSection = () => {
   return (
-    <StageSection id="certifications" bgImage={certsBg} stageNumber={5} stageTitle="The Sacred Grove">
+    <StageSection id="certifications" bgImage={certsBg} stageNumber={5} stageTitle="The Sacred Grove" animatedBgTheme="fire">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
