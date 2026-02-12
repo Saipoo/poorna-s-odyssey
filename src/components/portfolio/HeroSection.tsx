@@ -105,18 +105,6 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Floating Pandora creatures */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <FloatingCreature delay={0} x="10%" y="20%" size="w-8 h-8" emoji="🦋" />
-        <FloatingCreature delay={2} x="80%" y="30%" size="w-8 h-8" emoji="🦋" />
-        <FloatingCreature delay={1} x="60%" y="60%" size="w-6 h-6" emoji="🪲" />
-        <FloatingCreature delay={3} x="25%" y="70%" size="w-8 h-8" emoji="🦎" />
-        <FloatingCreature delay={1.5} x="90%" y="15%" size="w-6 h-6" emoji="🐉" />
-        <FloatingCreature delay={4} x="45%" y="80%" size="w-8 h-8" emoji="🦅" />
-        <FloatingCreature delay={2.5} x="15%" y="45%" size="w-6 h-6" emoji="✨" />
-        <FloatingCreature delay={3.5} x="70%" y="50%" size="w-6 h-6" emoji="🌿" />
-      </div>
-
       {/* Glowing bubbles rising */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <GlowBubble delay={0} x="15%" size={12} color="rgba(0,255,200,0.4)" />
